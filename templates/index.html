@@ -1,70 +1,97 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kopi Mantap</title>
-    <link
-      rel="stylesheet"
-      href="{{ url_for('static', filename='style.css') }}"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Website Kopi</title>
     <style>
-      a[href^="tel:"] {
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: url("images/kopi3.jpg") no-repeat center center fixed;
+        background-size: cover;
+        color: whitesmoke;
+      }
+
+      .container {
+        background-color: rgba(255, 255, 255, 0.6);
+        padding: 20px;
+        max-width: 800px;
+        margin: 40px auto;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        color: black; /* supaya tulisan di container terlihat */
+      }
+
+      header {
+        text-align: center;
+        padding: 10px 0;
+      }
+
+      nav a {
         color: white;
-        font-weight: bold;
+        margin: 0 10px;
+        text-decoration: none;
+      }
+
+      nav a:hover {
         text-decoration: underline;
-        font-size: 1.2em;
+      }
+
+      h2 {
+        border-bottom: 2px solid #fff;
+        padding-bottom: 5px;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+      }
+
+      form input,
+      form textarea {
+        padding: 10px;
+        margin: 5px 0;
+      }
+
+      form button {
+        padding: 10px;
+        background: brown;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+
+      form button:hover {
+        background: darkred;
+      }
+
+      a[href^="tel:"] {
+        color: red;
+        font-weight: bold;
       }
     </style>
   </head>
   <body>
     <div class="container">
       <header>
-        <h1>Kopi Mantap</h1>
+        <h1>Selamat datang di Website Kopi</h1>
         <nav>
-          <a href="#menu">Menu</a>
-          <a href="#kontak">Kontak</a>
-          <a href="#cs">Customer Service</a>
-          <a href="#lokasi">Lokasi</a>
+          <a href="#">Home</a>
+          <a href="#">Produk</a>
+          <a href="#">Kontak</a>
         </nav>
       </header>
 
-      <section id="menu">
-        <h2>Menu Kopi</h2>
-        <ul>
-          <li>☕ Espresso - Rp 15.000</li>
-          <li>☕ Cappuccino - Rp 20.000</li>
-          <li>☕ Latte - Rp 22.000</li>
-          <li>☕ Americano - Rp 18.000</li>
-        </ul>
-      </section>
+      <h2>Form Pemesanan</h2>
+      <form>
+        <input type="text" placeholder="Nama" required />
+        <input type="tel" placeholder="Nomor Telepon" required />
+        <textarea placeholder="Pesan" rows="4"></textarea>
+        <button type="submit">Kirim</button>
+      </form>
 
-      <section id="kontak">
-        <h2>Kontak</h2>
-        <p>📱 HP: <a href="tel:+628123456789">+62 812-3456-789</a></p>
-      </section>
-
-      <section id="cs">
-        <h2>Customer Service</h2>
-        <form>
-          <input type="text" placeholder="Nama Anda" required />
-          <input type="email" placeholder="Email Anda" required />
-          <textarea placeholder="Pesan Anda" required></textarea>
-          <button type="submit">Kirim</button>
-        </form>
-      </section>
-
-      <section id="lokasi">
-        <h2>Lokasi Kami</h2>
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.935340826225!2d110.36314607592536!3d-7.810643392212686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a5788933baf9f%3A0xa824e0c70ef9fcb!2sKedai%20Kopi!5e0!3m2!1sid!2sid!4v1691319878765!5m2!1sid!2sid"
-          width="100%"
-          height="250"
-          style="border: 0"
-          allowfullscreen=""
-          loading="lazy"
-        ></iframe>
-      </section>
+      <p>Hubungi kami: <a href="tel:+628123456789">+62 812 3456 789</a></p>
     </div>
   </body>
 </html>
