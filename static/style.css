@@ -1,98 +1,78 @@
 body {
   margin: 0;
-  font-family: "Poppins", sans-serif;
+  font-family: Arial, sans-serif;
   background: url("./kopi3.jpg") no-repeat center center fixed;
   background-size: cover;
-  color: rgb(255, 230, 180);
+  color: rgb(223, 194, 0);
 }
 
-/* Lapisan gelap agar teks lebih jelas */
-.overlay {
-  background-color: rgba(40, 20, 10, 0.7);
-  min-height: 100vh;
-  padding: 20px;
+/* MENU BAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(82, 10, 10, 0.8);
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-header {
-  text-align: center;
-  padding: 20px 0;
-}
-
-header h1 {
-  font-size: 2.5em;
+.logo {
   margin: 0;
-  color: #ffd27f;
-  text-shadow: 2px 2px 5px #000;
-}
-
-nav {
-  margin-top: 10px;
+  font-size: 24px;
+  color: #ffcc00;
+  font-weight: bold;
 }
 
 nav a {
-  color: #ffd27f;
+  color: white;
   margin: 0 15px;
   text-decoration: none;
   font-weight: bold;
-  transition: color 0.3s ease;
+  transition: color 0.3s, border-bottom 0.3s;
 }
 
 nav a:hover {
-  color: #ff914d;
+  color: #ffcc00;
+  border-bottom: 2px solid #ffcc00;
 }
 
-h2 {
-  border-bottom: 2px solid #ff914d;
-  padding-bottom: 5px;
+/* CONTAINER KONTEN */
+.container {
+  background-color: rgba(82, 10, 10, 0.6);
+  padding: 20px;
+  margin-top: 20px;
 }
 
+/* FORM */
 form {
   display: flex;
   flex-direction: column;
-  max-width: 500px;
-  margin: auto;
 }
 
 form input,
 form textarea {
   padding: 10px;
-  margin: 8px 0;
+  margin: 5px 0;
   border: none;
   border-radius: 5px;
-  background-color: rgba(255, 255, 255, 0.9);
 }
 
 form button {
   padding: 10px;
-  background: #a0522d;
+  background: brown;
   color: white;
   border: none;
   cursor: pointer;
   border-radius: 5px;
-  transition: background 0.3s ease;
 }
 
 form button:hover {
-  background: #8b4513;
+  background: darkred;
 }
 
 a[href^="tel:"] {
-  color: #ff4500;
+  color: red;
   font-weight: bold;
-}
-
-/* Animasi fade-in */
-.fade-in {
-  animation: fadeIn 1.2s ease-in-out;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
